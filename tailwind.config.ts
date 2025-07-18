@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
 	darkMode: ["class"],
@@ -18,7 +19,15 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Roboto', ...fontFamily.sans],
+				heading: ['Montserrat', ...fontFamily.sans],
+			},
 			colors: {
+				'space-navy': '#0F172A',
+				'cosmic-cyan': '#06B6D4',
+				'space-purple': '#B55CF6',
+				'tech-blue': '#1E293B',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
